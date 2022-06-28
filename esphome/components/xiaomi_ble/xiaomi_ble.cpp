@@ -227,7 +227,7 @@ optional<XiaomiParseResult> parse_xiaomi_header(const esp32_ble_tracker::Service
     if (raw.size() == 19)
       result.raw_offset -= 6;
   } else {
-    ESP_LOGVV(TAG, "parse_xiaomi_header(): unknown device, no magic bytes. %s ", format_hex_pretty(device_uuid, 2).c_str());
+    ESP_LOGV(TAG, "parse_xiaomi_header(): unknown device, no magic bytes. %s ", format_hex_pretty(device_uuid, 2).c_str());
     return {};
   }
 
