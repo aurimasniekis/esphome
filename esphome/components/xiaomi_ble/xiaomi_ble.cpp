@@ -190,6 +190,9 @@ optional<XiaomiParseResult> parse_xiaomi_header(const esp32_ble_tracker::Service
   } else if (device_uuid == 0x045b) {  // rectangular body, e-ink display
     result.type = XiaomiParseResult::TYPE_LYWSD02;
     result.name = "LYWSD02";
+  } else if (device_uuid == 0xFE95) {  // rectangular body, e-ink display
+    result.type = XiaomiParseResult::TYPE_LYWSD02;
+    result.name = "LYWSD02";
   } else if (device_uuid == 0x040a) {  // Mosquito Repellent Smart Version
     result.type = XiaomiParseResult::TYPE_WX08ZM;
     result.name = "WX08ZM";
